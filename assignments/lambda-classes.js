@@ -39,13 +39,20 @@ class student extends person {
         super(studentAttributes)
         this.newPreviousBackground = studentAttributes.previousBackground;
         this.newClassName = studentAttributes.className;
-        this.newFavSubjects = studentAttributes.favSubjects;
+        this.favSubjects = studentAttributes.favSubjects;
         this.newSubject = studentAttributes.subject;
     }
 
-listSubject() {
-    return `${this.newName} favorite subjects is ${this.newFavSubjects}`;
+// listSubject() {
+//     return `${this.newName} favorite subjects is ${this.newFavSubjects}`;
+// }
+
+listsSubjects() {
+    for(let i=0; i<this.favSubjects.length; i++) {
+        console.log(this.favSubjects[i]);
+    }
 }
+
 
 PRAssignment() {
     return `${this.newName} has submitted a PR for ${this.newSubject}`;
@@ -93,7 +100,7 @@ const randy = new student ({
     name: "randy",
     previousBackground: "maintenance work",
     className: "webpt6",
-    favSubjects: "html and javascript",
+    favSubjects: ["html", "javascript"],
     subject: "javascriptIV",
 })
 
@@ -107,7 +114,7 @@ const richard = new ProjectManager ({
 console.log(kevin.speak());
 console.log(keiran.subject());
 console.log(keiran.grade());
-console.log(randy.listSubject());
+randy.listsSubjects();
 console.log(randy.PRAssignment());
 console.log(randy.sprintChallenge());
 console.log(richard.standup());
