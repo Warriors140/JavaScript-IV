@@ -44,7 +44,7 @@ class student extends person {
     }
 
 listSubject() {
-    return `${this.newName} favorite subject is ${this.newFavSubjects}`;
+    return `${this.newName} favorite subjects is ${this.newFavSubjects}`;
 }
 
 PRAssignment() {
@@ -93,7 +93,7 @@ const randy = new student ({
     name: "randy",
     previousBackground: "maintenance work",
     className: "webpt6",
-    favSubjects: "html, javascript",
+    favSubjects: "html and javascript",
     subject: "javascriptIV",
 })
 
